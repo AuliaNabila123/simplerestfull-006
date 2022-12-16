@@ -29,12 +29,18 @@ public class restController {
         Product honey = new Product();
         honey.setId("1");
         honey.setName("Honey");
+        honey.setPrice(35000);
+        honey.setNumber(2);
         productRepo.put(honey.getId(), honey);
+        honey.setTotal();
         
         Product almond = new Product();
         almond.setId("2");
         almond.setName("Almond");
+        almond.setPrice(50000);
+        almond.setNumber(1);
         productRepo.put(almond.getId(), almond);
+        almond.setTotal();
     }
     //Menghapus data
     @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
